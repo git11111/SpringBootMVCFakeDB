@@ -23,4 +23,9 @@ public class StudentServices {
 	   
 	   return studentDAO.getStudentById(id);
    }
+   
+   public void deleteStudentById(int id){
+	   
+	   studentDAO.deleteStudent(id);
+   }
 }

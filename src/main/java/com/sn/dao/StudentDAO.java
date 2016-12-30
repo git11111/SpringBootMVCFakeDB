@@ -34,5 +34,12 @@ public class StudentDAO {
 		
 		return this.students.get(id);
 	}
+	
+	public void deleteStudent(int id){
+		
+		this.students.remove(id);
+	}
+	
+	
 
 }
