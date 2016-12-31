@@ -28,4 +28,13 @@ public class StudentServices {
 	   
 	   studentDAO.deleteStudent(id);
    }
+   
+   public void updateStudentById(Student student){
+	   studentDAO.updateStudentById(student);
+   }
+
+public void insertStudent(Student student) {
+	studentDAO.insertStudent(student);
+	
+}
 }

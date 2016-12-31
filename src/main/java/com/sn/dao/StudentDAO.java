@@ -40,6 +40,20 @@ public class StudentDAO {
 		this.students.remove(id);
 	}
 	
+	public void updateStudentById(Student student){
+		
+		Student s = students.get(student.getId());
+		s.setName(student.getName());
+		s.setCourse(student.getCourse());
+		
+		this.students.put(student.getId(), student);
+		
+	}
+	
+	public void insertStudent(Student student){
+		this.students.put(student.getId(), student);
+	}
+	
 	
 
 }
