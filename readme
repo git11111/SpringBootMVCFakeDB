@@ -1,1 +1,28 @@
 
+how to use @Qualifier
+
+if you have two database and you wantnt to use one of them use @Qualifier
+
+suppose create interface StudentDAO
+
+and create FakeDAO and then create MongoDAO then implement StudentDAO
+
+then in service layer 
+@Autowired
+@Qualifier("fakedao")
+
+@Service
+public class StudentServices {
+
+	@Autowired
+  @Qualifier("fakedao")
+	private StudentDAO studentDAO;
+  
+ then
+ 
+ @Repository
+ @Qualifier("fakedao")
+ public class FakeDao implements StudentDAO{
+ }
+
+https://www.youtube.com/watch?v=Ke7Tr4RgRTs
